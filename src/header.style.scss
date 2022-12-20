@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  margin: 1rem 8rem;
+  display: flex;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    li {
+      padding: 1rem;
+    }
+  }
+}
+
+.header-section {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  .left-container {
+    max-width: 500px;
+
+    h1 {
+      font-size: 64px;
+    }
+  }
+
+  .info-container {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    border-radius: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.calculator-section {
+  margin: 1rem 8rem;
+  height: 100vh;
+}
+
+.articles-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .articles-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
