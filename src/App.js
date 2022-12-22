@@ -1,4 +1,5 @@
 import Card from "./components/card/card.component.jsx";
+import Nav from "./components/nav/nav.component.jsx";
 import "./header.style.scss";
 
 const articleInfo = [
@@ -21,15 +22,8 @@ const articleInfo = [
 
 const App = () => {
   return (
-    <div>
-      <nav className="nav">
-        <h2>LOGO</h2>
-        <ul>
-          <li>Topplistan</li>
-          <li>Spartips</li>
-          <li>Logga in</li>
-        </ul>
-      </nav>
+    <div className="body">
+      <Nav />
       <div className="header-section">
         <div className="left-container">
           <h1>HUR MYCKET KOSTAR MIN EL?</h1>
@@ -53,7 +47,7 @@ const App = () => {
           ))}
         </div>
         <footer>
-          <p>Cpywright Emelie Köhler</p>
+          <p>Copyright Emelie Köhler</p>
         </footer>
       </div>
     </div>
