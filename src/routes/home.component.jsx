@@ -1,4 +1,5 @@
 import Card from "../components/card/card.component";
+import Header from "../components/header/header.component";
 
 const articleInfo = [
   {
@@ -21,19 +22,7 @@ const articleInfo = [
 const Home = () => {
   return (
     <div className="body">
-      <div className="header-section">
-        <div className="left-container">
-          <h1>HUR MYCKET KOSTAR MIN EL?</h1>
-          <button>KALKYLATORN</button>
-        </div>
-        <div className="info-container">
-          <h2>Idag kostar</h2>
-          <p>En kopp kaffe 2kr</p>
-          <p>En TV-kväll 10kr</p>
-          <p>En tvätt 16kr</p>
-          <p>Gratäng till middag 34kr</p>
-        </div>
-      </div>
+      <Header />
       <div className="calculator-section">
         <h1>KALKYLATORN</h1>
       </div>

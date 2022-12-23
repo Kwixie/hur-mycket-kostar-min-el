@@ -34,41 +34,6 @@ a {
   text-decoration: none;
 }
 
-.header-section {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-
-  .left-container {
-    max-width: 500px;
-
-    h1 {
-      font-size: 64px;
-    }
-  }
-
-  .info-container {
-    width: 400px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(
-      circle,
-      rgb(252, 203, 155) 23%,
-      /* rgb 133, 89, 43*/ rgb(255, 168, 54) 100%
-    );
-    border-radius: 50%;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
-    h2 {
-      margin-bottom: 2rem;
-    }
-  }
-}
-
 .calculator-section {
   margin: 1rem 8rem;
   height: 100vh;
