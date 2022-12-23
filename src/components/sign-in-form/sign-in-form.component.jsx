@@ -1,48 +1,45 @@
 import { useState } from "react";
 import {
-  createAuthUserWithEmailAndPassword,
+  signInWithGooglePopup,
   createUserDocumentFromAuth,
+  signInAuthWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
-import "./sign-up-form.styles.scss";
+import "./sign-in-form.styles.scss";
 import "../form-input/form-input.styles.scss";
 
 const defaultFormFields = {
-  displayName: "",
   email: "",
   password: "",
-  confirmPassword: "",
 };
 
-const SignUpForm = () => {
+const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
-  const { displayName, email, password, confirmPassword } = formFields;
+  const { email, password } = formFields;
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
 
+  const signInWithGoogle = async () => {
+    const { user } = await signInWithGooglePopup();
+    await createUserDocumentFromAuth(user);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (password !== confirmPassword) {
-      alert("Lösenordet matchar inte!");
-      return;
-    }
-
     try {
-      const { user } = await createAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
-
-      await createUserDocumentFromAuth(user, { displayName });
+      const response = await signInAuthWithEmailAndPassword(email, password);
+      console.log(response);
       resetFormFields();
     } catch (error) {
-      if (error.code === "auth/email-already-in-use") {
-        alert("Gick inte att skapa konto, email används redan");
+      if (error.code === "auth/wrong-password") {
+        alert("Inloggningsuppgifter stämmer ej");
+      } else if (error.code === "auth/user-not-found") {
+        alert("Inloggningsuppgifter stämmer ej");
       } else {
-        console.log(error);
+        alert("Ops! Något gick fel");
       }
     }
   };
@@ -55,17 +52,8 @@ const SignUpForm = () => {
 
   return (
     <div className="sign-up-container">
-      <h2>Skapa ett konto med email och lösenord</h2>
+      <h2>Har du redan ett konto?</h2>
       <form onSubmit={handleSubmit}>
-        <FormInput
-          label="Namn"
-          type="text"
-          required
-          onChange={handleChange}
-          name="displayName"
-          value={displayName}
-        />
-
         <FormInput
           label="Email"
           type="email"
@@ -84,18 +72,13 @@ const SignUpForm = () => {
           value={password}
         />
 
-        <FormInput
-          label="Bekräfta lösenord"
-          type="password"
-          required
-          onChange={handleChange}
-          name="confirmPassword"
-          value={confirmPassword}
-        />
-        <button type="submit">Skapa konto</button>
+        <button type="submit">Logga in</button>
+        <button type="button" onClick={signInWithGoogle}>
+          Logga in med Google
+        </button>
       </form>
     </div>
   );
 };
 
-export default SignUpForm;
+export default SignInForm;
