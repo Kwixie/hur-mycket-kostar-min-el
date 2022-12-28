@@ -13,12 +13,13 @@
   }
 
   .info-container {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem 1rem;
     background: radial-gradient(
       circle,
       rgb(252, 203, 155) 23%,
@@ -28,7 +29,8 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
     h2 {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
     }
   }
 }

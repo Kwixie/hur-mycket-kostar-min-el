@@ -1,8 +1,11 @@
 .nav {
+  position: absolute;
+  width: 100vw;
   padding: 1rem 4rem;
   display: flex;
   justify-content: space-between;
-  background: rgb(255, 243, 224);
+  background: transparent;
+
   .logo {
     width: 70%;
   }

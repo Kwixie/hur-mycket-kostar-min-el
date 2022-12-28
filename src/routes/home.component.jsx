@@ -1,5 +1,6 @@
 import Card from "../components/card/card.component";
 import Header from "../components/header/header.component";
+import ExamplesList from "../components/examples-list/examples-list.component";
 
 const articleInfo = [
   {
@@ -24,7 +25,7 @@ const Home = () => {
     <div className="body">
       <Header />
       <div className="calculator-section">
-        <h1>KALKYLATORN</h1>
+        <ExamplesList />
       </div>
       <div className="articles-section">
         <div className="articles-container">
@@ -33,7 +34,7 @@ const Home = () => {
           ))}
         </div>
         <footer>
-          <p>Copyright Emelie Köhler</p>
+          <p>Copywright Emelie Köhler</p>
         </footer>
       </div>
     </div>
