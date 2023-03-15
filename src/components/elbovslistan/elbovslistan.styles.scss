@@ -1,0 +1,77 @@
+@import "../../index.scss";
+
+.elbovslistan-section {
+  padding: 2rem 4rem;
+
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 48px;
+    margin: 1.5rem 1rem 3rem 1rem;
+    text-align: center;
+  }
+
+  .elbovslistan-container {
+    width: 80vw;
+    height: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.8rem 0rem;
+    align-items: center;
+
+    @media (max-width: 950px) {
+      wrap: no-wrap;
+      height: auto;
+      padding-bottom: 2rem;
+    }
+
+    .device-container {
+      width: 34vw;
+      height: auto;
+      font-size: 20px;
+      flex-direction: column;
+      border: 2px solid $copper-red;
+      border-radius: 10px;
+      padding: 0.5rem;
+
+      @media (max-width: 950px) {
+        width: 100%;
+      }
+
+      .first-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+          display: flex;
+          align-items: center;
+        }
+        p {
+          display: inline;
+          padding-left: 16px;
+          margin: 0px;
+        }
+        .elbovslistan-cost {
+          white-space: nowrap;
+          font-weight: bold;
+        }
+        .material-icons {
+          vertical-align: middle;
+          font-size: 38px;
+          margin-bottom: 5px;
+        }
+      }
+      .details {
+        font-size: 14px;
+        color: grey;
+        margin: 0.3rem 0rem;
+        padding-left: 54px;
+      }
+    }
+  }
+}

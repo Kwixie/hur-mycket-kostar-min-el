@@ -1,20 +1,21 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./routes/home.component";
-import Spartips from "./components/spartips/spartips.component";
-import Nav from "./components/nav/nav.component";
-import Authentication from "./routes/authentication.component";
-import Sparkalkylatorn from "./routes/sparkalkylatorn.component";
+import Home from "./routes/home.page.component";
+import SpartipsPage from "./routes/spartips.page.component";
+import Authentication from "./routes/authentication.page.component";
+import Sparkalkylatorn from "./routes/sparkalkylator.page.component";
+import ScrollToTop from "./components/scroll-to-top.compponent";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Nav />}>
+    <ScrollToTop>
+      <Routes>
+        <Route path="/" element={<Home />} />
         <Route index element={<Home />} />
-        <Route path="spartips" element={<Spartips />} />
+        <Route path="spartips" element={<SpartipsPage />} />
         <Route path="logga-in" element={<Authentication />} />
         <Route path="sparkalkylatorn" element={<Sparkalkylatorn />} />
-      </Route>
-    </Routes>
+      </Routes>
+    </ScrollToTop>
   );
 };
 

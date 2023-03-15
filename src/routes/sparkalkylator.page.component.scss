@@ -1,0 +1,25 @@
+.sparkalkylator-page {
+  background: radial-gradient(rgb(233, 233, 233), rgb(190, 190, 190));
+  //background: linear-gradient(45deg, rgb(212, 212, 212), rgb(168, 168, 168));
+  padding: 4rem 4rem;
+  min-height: 100vh;
+  position: relative;
+
+  @media (max-width: 480px) {
+    padding: 4rem 1.5rem;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 26px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .robot {
+    width: 520px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+}

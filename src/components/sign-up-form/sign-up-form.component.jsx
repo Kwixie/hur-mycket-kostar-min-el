@@ -4,7 +4,6 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
-import "./sign-up-form.styles.scss";
 import "../form-input/form-input.styles.scss";
 
 const defaultFormFields = {
@@ -14,7 +13,7 @@ const defaultFormFields = {
   confirmPassword: "",
 };
 
-const SignUpForm = () => {
+const SignUpForm = ({ onFormSwitch, currentForm }) => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
 
@@ -55,7 +54,15 @@ const SignUpForm = () => {
 
   return (
     <div className="sign-up-container">
-      <h2>Skapa ett konto med email och lösenord</h2>
+      <div className="form-switch-btn-container">
+        <button onClick={() => onFormSwitch("login")}>Jag har ett konto</button>
+        <button
+          className={currentForm === "register" ? "btnActive" : ""}
+          onClick={() => onFormSwitch("register")}
+        >
+          Skapa konto
+        </button>
+      </div>
       <form onSubmit={handleSubmit}>
         <FormInput
           label="Namn"
@@ -92,7 +99,9 @@ const SignUpForm = () => {
           name="confirmPassword"
           value={confirmPassword}
         />
-        <button type="submit">Skapa konto</button>
+        <button className="sign-up-btn" type="submit">
+          Skapa konto
+        </button>
       </form>
     </div>
   );

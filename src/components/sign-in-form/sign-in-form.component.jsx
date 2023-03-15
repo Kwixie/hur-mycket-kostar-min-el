@@ -6,14 +6,12 @@ import {
 import FormInput from "../form-input/form-input.component";
 import "../form-input/form-input.styles.scss";
 
-import "./sign-in-form.styles.scss";
-
 const defaultFormFields = {
   email: "",
   password: "",
 };
 
-const SignInForm = () => {
+const SignInForm = ({ onFormSwitch, currentForm }) => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
@@ -50,31 +48,52 @@ const SignInForm = () => {
   };
 
   return (
-    <div className="sign-up-container">
-      <h2>Har du redan ett konto?</h2>
-      <form onSubmit={handleSubmit}>
-        <FormInput
-          label="Email"
-          type="email"
-          required
-          onChange={handleChange}
-          name="email"
-          value={email}
-        />
-
-        <FormInput
-          label="Lösenord"
-          type="password"
-          required
-          onChange={handleChange}
-          name="password"
-          value={password}
-        />
-
-        <button type="submit">Logga in</button>
-        <button type="button" onClick={signInWithGoogle}>
-          Logga in med Google
+    <div className="sign-in-container">
+      <div className="form-switch-btn-container">
+        <button
+          className={currentForm === "login" ? "btnActive" : ""}
+          onClick={() => onFormSwitch("login")}
+        >
+          Jag har ett konto
         </button>
+        <button onClick={() => onFormSwitch("register")}>Skapa konto</button>
+      </div>
+      <form onSubmit={handleSubmit}>
+        <div className="div-inputs">
+          <FormInput
+            label="Email"
+            type="email"
+            required
+            onChange={handleChange}
+            name="email"
+            value={email}
+          />
+
+          <FormInput
+            label="Lösenord"
+            type="password"
+            required
+            onChange={handleChange}
+            name="password"
+            value={password}
+          />
+        </div>
+        <div className="div-btn">
+          <button type="submit">Logga in</button>
+          <button
+            className="google-btn"
+            type="button"
+            onClick={signInWithGoogle}
+          >
+            <div className="google-btn-items">
+              <img
+                class="google-icon"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+              />
+              <p>Google Login</p>
+            </div>
+          </button>
+        </div>
       </form>
     </div>
   );

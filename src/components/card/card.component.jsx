@@ -1,12 +1,19 @@
+import { DocumentSnapshot } from "firebase/firestore";
 import "./card.styles.scss";
+import { Link } from "react-router-dom";
 
-const Card = ({ article }) => {
-  const { imageUrl, title } = article;
+const Card = ({ spartips }) => {
+  const { imageUrl, heading, text } = spartips;
   return (
     <div className="card-container">
       <img src={imageUrl} alt="img"></img>
-      <h2>{title}</h2>
-      <p>Lorem ipsum</p>
+      <h2>{heading}</h2>
+      <p>
+        {text}{" "}
+        <Link className="spartips-link" to="/spartips">
+          Läs mer...
+        </Link>
+      </p>
     </div>
   );
 };

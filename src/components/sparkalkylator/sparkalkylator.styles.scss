@@ -1,0 +1,122 @@
+.sparkalkylator-form {
+  background-color: hsl(0, 0%, 100%);
+  //background-color: rgb(238, 237, 237);
+  padding: 1rem;
+  border-radius: 5px;
+  // border: 1px solid hsl(14, 62%, 53%);
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+
+  button {
+    height: 100%;
+    font-family: "Comfortaa";
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    padding-top: 0.2rem;
+    background-color: rgb(37, 37, 37);
+    color: white;
+  }
+
+  .material-icons {
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: black;
+  }
+  .sparkalkylator-form-item {
+    font-size: 20px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    margin-bottom: 1rem;
+
+    .first-form-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      // margin: 0.2rem 0rem;
+
+      select {
+        height: 30px;
+        border-radius: 5px;
+        font-family: "Comfortaa";
+        width: min(26rem, 60%); //hmmmmm
+      }
+      .delete {
+        display: flex;
+        align-items: center;
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .input-values {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media (max-width: 600px) {
+        width: 250px;
+      }
+
+      .tid,
+      .effekt {
+        margin: 0.2rem 0rem;
+      }
+
+      .effekt {
+        margin-right: 1rem;
+      }
+
+      label {
+        color: black;
+        display: block;
+      }
+      input,
+      textarea {
+        display: block;
+        font-size: 18px;
+        padding: 0.1rem;
+        width: 100px;
+        border-radius: 5px;
+        margin: 0rem;
+        // border-color: white;
+        border: none;
+        font-family: "Comfortaa";
+        background-color: hsl(14, 66%, 77%);
+      }
+
+      p {
+        display: inline-block;
+        margin: 0px 0px 0px 1rem;
+      }
+    }
+  }
+  .btn-add {
+    margin-top: 0.2rem;
+  }
+  .btn-calculate {
+    height: 36px;
+    width: 150px;
+    font-family: "Comfortaa";
+    margin: 0.7rem 0.5rem;
+    border-radius: 5px;
+    border-color: hsl(14, 62%, 53%);
+    background-color: hsl(14, 62%, 53%);
+    color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+  }
+  .btn-calculate:hover {
+    background-color: hsl(14, 62%, 60%);
+  }
+  .sum-all {
+    margin: 0.5rem;
+    font-size: 30px;
+    margin-left: 2rem;
+  }
+}

@@ -1,7 +1,7 @@
 const FormInput = ({ label, ...otherProps }) => {
   return (
-    <div>
-      <label>{label}</label>
+    <div className="form-row">
+      <label htmlFor={label}>{label}</label>
       <input className="form-input" {...otherProps} />
     </div>
   );

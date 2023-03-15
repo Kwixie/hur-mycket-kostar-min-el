@@ -1,20 +1,49 @@
-import { Fragment, useContext } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Fragment, useContext, useState, useEffect, useRef } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { UserContext } from "../../contexts/user.context";
 import "./nav.styles.scss";
-import logo from "../../assets/icons8-lightning-bolt-48.png";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 const Nav = () => {
   const { currentUser } = useContext(UserContext);
+  const [nState, setnState] = useState("top");
+  const [lastScrollY, setScrollY] = useState(0);
+  const navRef = useRef();
+
+  const showNavbar = () => {
+    navRef.current.classList.toggle("responsive-nav");
+  };
+
+  const changeNavbar = () => {
+    if (window.scrollY > lastScrollY) {
+      setnState("down");
+    }
+    if (window.scrollY < lastScrollY) {
+      setnState("up");
+    }
+    if (window.scrollY === 0) {
+      setnState("top");
+    }
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", changeNavbar);
+      return () => {
+        window.removeEventListener("scroll", changeNavbar);
+      };
+    }
+  });
 
   return (
     <Fragment>
-      <div className="nav">
+      <div className={"nav " + nState}>
         <Link className="logo-container" to="/">
-          <img src={logo} alt="logo" className="logo" />
+          <span className="material-icons">electric_bolt</span>
         </Link>
-        <div className="nav-links-container">
+        <nav className="nav-links-container" ref={navRef}>
           <Link className="nav-link" to="/sparkalkylatorn">
             Sparkalkylatorn
           </Link>
@@ -30,9 +59,20 @@ const Nav = () => {
               Logga in
             </Link>
           )}
-        </div>
+          <button
+            className="material-icons nav-btn nav-close-btn"
+            onClick={showNavbar}
+          >
+            close
+          </button>
+        </nav>
+        <button
+          className="material-icons nav-btn nav-open-btn"
+          onClick={showNavbar}
+        >
+          menu
+        </button>
       </div>
-      <Outlet />
     </Fragment>
   );
 };
