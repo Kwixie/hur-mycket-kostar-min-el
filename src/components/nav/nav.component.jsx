@@ -1,5 +1,4 @@
 import { Fragment, useContext, useState, useEffect, useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../contexts/user.context";
 import "./nav.styles.scss";

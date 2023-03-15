@@ -1,4 +1,4 @@
-import { DocumentSnapshot } from "firebase/firestore";
+// import { DocumentSnapshot } from "firebase/firestore";
 import "./card.styles.scss";
 import { Link } from "react-router-dom";
 
