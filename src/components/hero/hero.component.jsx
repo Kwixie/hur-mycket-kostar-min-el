@@ -72,7 +72,7 @@ const Hero = () => {
                         ((POWER_DATA[1].power * 0.2 * pricePerKwh) / 1000) * 10
                       ) / 10
                     }
-                    duration={2}
+                    duration={5}
                     delay={0}
                   />{" "}
                   kr

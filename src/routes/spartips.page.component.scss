@@ -49,13 +49,8 @@
             //text-decoration: underline;
           }
         }
-        .save-now,
-        .save-year {
-        }
       }
-      /*       .image-container {
-        width: 200px;
-        height: 200px; */
+
       img {
         width: 200px;
         object-fit: cover;
@@ -77,6 +72,7 @@
     top: -17vh;
     right: -330px;
     transform: rotate(140deg);
+    filter: blur(0.6px);
 
     @media (max-width: 480px) {
       top: -3rem;

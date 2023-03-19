@@ -5,6 +5,10 @@
   background: $background-colours;
   position: relative;
 
+  /*   @media (max-width: 480px) {
+    height: 90vh;
+  } */
+
   .robot {
     width: max(34vw, 65vh);
     position: absolute;
@@ -242,10 +246,11 @@
           }
 
           h2 {
-            margin-top: 0.4rem;
             margin: 0.4rem 0rem;
 
             @media (max-width: 976px) {
+              padding: 0px;
+              padding-bottom: 6px;
               font-size: 1rem;
               margin-top: 0px;
               margin-bottom: 0px;
