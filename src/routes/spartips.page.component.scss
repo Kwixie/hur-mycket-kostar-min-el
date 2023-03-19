@@ -3,6 +3,7 @@
   background: radial-gradient(rgb(233, 233, 233), rgb(190, 190, 190));
   // background-color: hsl(14, 100%, 69%);
   position: relative;
+  overflow: hidden;
 
   @media (max-width: 480px) {
     padding: 4rem 1.5rem;

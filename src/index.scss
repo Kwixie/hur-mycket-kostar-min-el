@@ -26,6 +26,14 @@ body {
 
 a {
   text-decoration: none;
+  color: white;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 // Scrollbar styling
@@ -52,27 +60,4 @@ a {
 
 /* ::-webkit-scrollbar-thumb:horizontal {
   display: none;
-} */
-
-// OLD STUFF
-
-/* background-image: linear-gradient(
-  45deg,
-  rgb(255, 123, 0),
-  rgb(255, 153, 0),
-  rgb(252, 193, 83),
-  orange,
-  rgb(255, 123, 0)
-);
-background-size: 200%;
-animation: bg-animation 20s infinite alternate;
-}
-
-@keyframes bg-animation {
-0% {
-  background-position: left;
-}
-100% {
-  background-position: right;
-}
 } */

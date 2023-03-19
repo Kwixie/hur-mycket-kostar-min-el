@@ -15,7 +15,7 @@
 
   .elbovslistan-container {
     width: 80vw;
-    height: 1100px;
+    height: 1050px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -59,6 +59,7 @@
         .elbovslistan-cost {
           white-space: nowrap;
           font-weight: bold;
+          padding-left: 0px;
         }
         .material-icons {
           vertical-align: middle;

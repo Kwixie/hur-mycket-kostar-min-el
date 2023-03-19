@@ -1,4 +1,4 @@
-import "./spartips.styles.scss";
+
 import { ElprisContext } from "../../contexts/elpris.context";
 import { useContext } from "react";
 
