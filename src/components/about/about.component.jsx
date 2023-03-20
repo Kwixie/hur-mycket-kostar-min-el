@@ -19,7 +19,7 @@ const About = () => {
         energiskatten på 0.392 kr/kWh + en elöverföringsavgift på 0.25 kr/kWh{" "}
         {"("}
         eller anpassat värde{")"}. Summan multipliceras sedan med momssatsen som
-        ligger på 33%.
+        ligger på 25%.
       </p>
       <h3>Blir kostnaden exakt?</h3>
       <p>
@@ -33,8 +33,8 @@ const About = () => {
         <br />
         Dessutom har kostnad för elcertifikat exkluderats för att förenkla
         beräkningar. Vad man betalar för det kan variera ganska mycket, men
-        vanligt är att det bara bara utgör någon till några procent av vad man
-        totalt sett betalar för sin el.
+        vanligt är att det bara utgör någon till några procent av vad man totalt
+        sett betalar för sin el.
         <br />
         <br />
         Och så får man inte glömma att man ofta har fasta abonnemangsavgifter
