@@ -49,7 +49,10 @@ const Nav = () => {
           <Link className="nav-link" to="/spartips">
             Spartips
           </Link>
-          {currentUser ? (
+          <Link className="nav-link" to="/om">
+            Om Sidan
+          </Link>
+          {/*           {currentUser ? (
             <Link className="nav-link" onClick={signOutUser}>
               Logga ut
             </Link>
@@ -57,7 +60,7 @@ const Nav = () => {
             <Link className="nav-link" to="/logga-in">
               Logga in
             </Link>
-          )}
+          )} */}
           <button
             className="material-icons nav-btn nav-close-btn"
             onClick={showNavbar}

@@ -1,0 +1,23 @@
+.content-container {
+  max-width: 70vw;
+
+  @media (max-width: 480px) {
+    max-width: 100%;
+  }
+
+  div {
+    line-height: 1.4;
+    padding-right: 1rem;
+
+    @media (max-width: 480px) {
+      padding: 0px;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      border-width: 0px 0px 3px 0px;
+      border-style: solid;
+      border-color: hsl(14, 62%, 53%);
+      width: fit-content;
+    }
+  }
+}

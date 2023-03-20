@@ -1,15 +1,16 @@
 .authentication-page {
   background: radial-gradient(rgb(233, 233, 233), rgb(190, 190, 190));
-  height: 100vh;
-  padding: 4rem;
+  min-height: 100vh;
+  // height: 100vh; auth
+  padding: 3rem 4rem; // Auth 4rem
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; //center auth
   overflow: hidden;
-  align-items: center;
+  // align-items: center; Auth
 
   @media (max-width: 480px) {
-    padding: 4rem 1.5rem;
+    padding: 4rem 1.5rem; // 4rem 1.5rem
   }
 
   .light-bulb {
@@ -17,9 +18,12 @@
     opacity: 0.85;
     position: absolute;
     top: 0px;
-    right: 48px;
+    right: 38px; // 48 auth
     filter: blur(0.6px);
 
+    @media (max-width: 976px) {
+      right: -30px;
+    }
     @media (max-width: 480px) {
       top: -4rem;
       width: 200px;
@@ -31,12 +35,15 @@
     width: 400px;
     position: absolute;
     bottom: 0px;
-    left: 0px;
+    left: -220px;
+    display: none; // auth
+    //left: 0px; Auth
     @media (max-width: 480px) {
-      left: -35vw;
-      bottom: -310px;
-      width: 500px;
-      transform: rotate(-40deg);
+      display: block; // Auth
+      left: -5vw; // -35vw;
+      bottom: -285px; // -310px
+      width: 400px; // 500px
+      transform: rotate(-30deg); // -40deg
     }
   }
   .content-container {
@@ -45,6 +52,7 @@
     padding-top: 2rem;
 
     @media (max-width: 480px) {
+      padding-top: 0px; //auth
       //width: 80%;
     }
 

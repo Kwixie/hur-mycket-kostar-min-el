@@ -30,8 +30,10 @@ const Netowner = () => {
             en genomsnittlig nätöverföringsavgift på 25 öre/kWh.
           </p>
           <p>
-            Kostnaden för nätöverföring kan variera mycket, nedan kan du anpassa
-            kostnaden själv.
+            Kostnaden för nätöverföring kan variera mycket beroende på avtal och
+            om man bor i villa eller lägenhet. Kolla på din senaste
+            elnätsfaktura och leta efter något som kallas nätöverförings- eller
+            elöverföringsavgift.
           </p>
           <form onSubmit={handleSubmit} className="input-field">
             <div className="input-row">

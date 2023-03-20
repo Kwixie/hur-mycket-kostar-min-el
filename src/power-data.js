@@ -56,6 +56,14 @@ const POWER_DATA = [
     description: "En 40-graders tvätt",
   },
   {
+    id: 22,
+    device: "diskmaskin",
+    power: 700,
+    icon: "wash",
+    duration: 2,
+    description: "Köra en diskmaskin",
+  },
+  {
     id: 4,
     device: "ugn",
     power: 1800,
@@ -79,14 +87,14 @@ const POWER_DATA = [
     duration: 0.33,
     description: "Damsuga",
   },
-  /*   {
+  {
     id: 7,
     device: "hårtork",
     power: 1500,
     icon: "air",
     duration: 0.2,
     description: "Föna håret",
-  }, */
+  },
   {
     id: 5,
     device: "vattenkokare",
