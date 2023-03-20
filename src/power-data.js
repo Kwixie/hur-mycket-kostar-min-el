@@ -12,7 +12,7 @@ const POWER_DATA = [
     device: "dush",
     power: 25000,
     icon: "shower",
-    duration: 0.25,
+    duration: 0.2,
     description: "Ta en dusch",
   },
   {
