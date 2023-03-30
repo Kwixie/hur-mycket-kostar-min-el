@@ -45,10 +45,10 @@ const About = () => {
       <h3>Vem står bakom sidan?</h3>
       <p>
         Jag som byggt sidan heter Emelie Köhler och jag är en junior
-        webbutvecklare. Den här sidan är ett av mina portfolioprojekt.
-        {/*         <br />
-        Jag letar aktivt webbutvecklarjobb, så skulle du ha ett tips är du
-        välkommen att ta kontakt på emelie.ekbk{"[at]"}gmail.com */}
+        webbutvecklare. Den här sidan är ett av mina portfolioprojekt. <br />
+      </p>
+      <p style={{ fontWeight: "bold", fontSize: "14px" }}>
+        Kontakt: emelie.ekbk{"[at]"}gmail.com
       </p>
     </div>
   );

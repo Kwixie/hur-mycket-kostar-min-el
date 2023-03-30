@@ -85,7 +85,7 @@ const POWER_DATA = [
     power: 1000,
     icon: "cleaning_services",
     duration: 0.33,
-    description: "Damsuga",
+    description: "Dammsuga",
   },
   {
     id: 7,
