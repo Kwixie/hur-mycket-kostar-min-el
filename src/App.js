@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./routes/home.page.component";
 import SpartipsPage from "./routes/spartips.page.component";
-// import Authentication from "./routes/authentication.page.component";
 import Sparkalkylatorn from "./routes/sparkalkylator.page.component";
 import ScrollToTop from "./components/scroll-to-top.compponent";
 import AboutPage from "./routes/about.page.component";

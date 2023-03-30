@@ -5,10 +5,6 @@
   background: $background-colours;
   position: relative;
 
-  /*   @media (max-width: 480px) {
-    height: 90vh;
-  } */
-
   .robot {
     width: max(34vw, 65vh);
     position: absolute;
@@ -104,7 +100,7 @@
         background: radial-gradient(
           circle,
           $copper-red 23%,
-          hsl(14, 62%, 35%) 100%
+          $copper-red-dark 100%
         );
         border-radius: 50%;
         width: 300px;
@@ -179,8 +175,8 @@
             margin: 0.4rem;
             margin-bottom: 0px;
             border-radius: 50%;
-            background: hsl(14, 62%, 60%);
-            border: hsl(14, 62%, 60%);
+            background: $copper-red-light;
+            border: $copper-red-light;
             color: hsl(0, 0%, 93%);
             font-size: 1.2rem;
             font-weight: bold;

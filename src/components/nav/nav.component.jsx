@@ -1,11 +1,8 @@
-import { Fragment, useContext, useState, useEffect, useRef } from "react";
+import { Fragment, useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { UserContext } from "../../contexts/user.context";
 import "./nav.styles.scss";
-import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 const Nav = () => {
-  const { currentUser } = useContext(UserContext);
   const [nState, setnState] = useState("top");
   const [lastScrollY, setScrollY] = useState(0);
   const navRef = useRef();
@@ -52,15 +49,6 @@ const Nav = () => {
           <Link className="nav-link" to="/om">
             Om Sidan
           </Link>
-          {/*           {currentUser ? (
-            <Link className="nav-link" onClick={signOutUser}>
-              Logga ut
-            </Link>
-          ) : (
-            <Link className="nav-link" to="/logga-in">
-              Logga in
-            </Link>
-          )} */}
           <button
             className="material-icons nav-btn nav-close-btn"
             onClick={showNavbar}

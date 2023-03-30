@@ -7,10 +7,7 @@ import SPARTIPS_DATA from "../spartips-data";
 
 const SpartipsPage = () => {
   return (
-    <div
-      className="spartips-page"
-      // style={{ backgroundImage: `url(${background})` }}
-    >
+    <div className="spartips-page">
       <Nav />
       <h1>Spartips</h1>
       <div className="spartips-container">

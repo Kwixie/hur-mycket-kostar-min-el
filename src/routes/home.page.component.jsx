@@ -4,12 +4,11 @@ import Netowner from "../components/netowner/netowner-section.component";
 import ExamplesList from "../components/elbovslistan/elbovslistan.component";
 import Nav from "../components/nav/nav.component";
 import SPARTIPS_DATA from "../spartips-data";
-// import { updatePassword } from "firebase/auth";
 
 const LED = SPARTIPS_DATA[3];
-const LOCKET = SPARTIPS_DATA[4];
+const POT = SPARTIPS_DATA[4];
 const WASH = SPARTIPS_DATA[8];
-const threeSpartipsData = [LED, LOCKET, WASH];
+const threeSpartipsData = [LED, POT, WASH];
 
 const Home = () => {
   return (

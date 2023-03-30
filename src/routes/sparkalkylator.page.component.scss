@@ -1,6 +1,7 @@
+@import "../index.scss";
+
 .sparkalkylator-page {
-  background: radial-gradient(rgb(233, 233, 233), rgb(190, 190, 190));
-  //background: linear-gradient(45deg, rgb(212, 212, 212), rgb(168, 168, 168));
+  background: $background-colours;
   padding: 4rem 4rem;
   min-height: 100vh;
   position: relative;

@@ -1,23 +1,83 @@
-.content-container {
-  max-width: 70vw;
+@import "../index.scss";
+
+.about-page {
+  background: $background-colours;
+  min-height: 100vh;
+  padding: 3rem 4rem;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
 
   @media (max-width: 480px) {
-    max-width: 100%;
+    padding: 4rem 1.5rem;
   }
 
-  div {
-    line-height: 1.4;
-    padding-right: 1rem;
+  .light-bulb {
+    width: 300px;
+    opacity: 0.85;
+    position: absolute;
+    top: 0px;
+    right: 38px;
+    filter: blur(0.6px);
+
+    @media (max-width: 976px) {
+      right: -30px;
+    }
+    @media (max-width: 480px) {
+      top: -4rem;
+      width: 200px;
+      right: 20vw;
+      display: none;
+    }
+  }
+  .robot {
+    width: 400px;
+    position: absolute;
+    bottom: 0px;
+    left: -220px;
+    display: none;
 
     @media (max-width: 480px) {
-      padding: 0px;
-      margin-bottom: 2rem;
+      display: block;
+      left: -5vw;
+      bottom: -285px;
+      width: 400px;
+      transform: rotate(-30deg);
     }
-    h2 {
-      border-width: 0px 0px 3px 0px;
-      border-style: solid;
-      border-color: hsl(14, 62%, 53%);
-      width: fit-content;
+  }
+  .content-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    max-width: 70vw;
+
+    @media (max-width: 480px) {
+      padding-top: 0px;
+      max-width: 100%;
+    }
+
+    .contact-p {
+      font-weight: bold;
+      font-size: 14px;
+      color: $copper-red;
+    }
+
+    div {
+      line-height: 1.4;
+      padding-right: 1rem;
+
+      @media (max-width: 480px) {
+        padding: 0px;
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        border-width: 0px 0px 3px 0px;
+        border-style: solid;
+        border-color: $copper-red;
+        width: fit-content;
+      }
     }
   }
 }

@@ -46,10 +46,8 @@ const About = () => {
       <p>
         Jag som byggt sidan heter Emelie Köhler och jag är en junior
         webbutvecklare. Den här sidan är ett av mina portfolioprojekt.
-        {/*         <br />
-        Jag letar aktivt webbutvecklarjobb, så skulle du ha ett tips är du
-        välkommen att ta kontakt på emelie.ekbk{"[at]"}gmail.com */}
       </p>
+      <p className="contact-p">Kontakt: emelie.ekbk{"[at]"}gmail.com</p>
     </div>
   );
 };

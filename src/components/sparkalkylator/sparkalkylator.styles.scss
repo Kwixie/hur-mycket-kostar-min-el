@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 .sparkalkylator-form {
   background-color: hsl(0, 0%, 100%);
   padding: 1rem;
@@ -34,14 +36,14 @@
     width: 150px;
     margin: 0.7rem 0.5rem;
     border-radius: 5px;
-    border-color: hsl(14, 62%, 53%);
-    background-color: hsl(14, 62%, 53%);
+    border-color: $copper-red;
+    background-color: $copper-red;
     color: white;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
   }
   .btn-calculate:hover {
-    background-color: hsl(14, 62%, 60%);
+    background-color: $copper-red-light;
   }
   .sum-all {
     margin: 0.5rem;
@@ -66,7 +68,7 @@
       select {
         height: 30px;
         border-radius: 5px;
-        width: min(26rem, 60%); //hmmmmm
+        width: min(26rem, 60%);
       }
       .delete {
         display: flex;
@@ -107,7 +109,6 @@
         width: 100px;
         border-radius: 5px;
         margin: 0rem;
-        // border-color: white;
         border: none;
         font-family: "Comfortaa";
         background-color: hsl(14, 66%, 77%);
